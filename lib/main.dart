@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tech_ecommerce/ui/pages/login_page.dart';
 import 'package:tech_ecommerce/ui/pages/splash_page.dart';
 
 void main() {
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
       designSize: Size(414, 896),
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashPage(),
+        routes: {
+          '/': (context) => SplashPage(),
+          '/login-page': (context) => LoginPage(),
+        },
       ),
     );
   }
