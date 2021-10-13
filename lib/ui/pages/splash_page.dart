@@ -1,11 +1,33 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tech_ecommerce/shared/theme.dart';
+import 'package:tech_ecommerce/ui/widgets/custom_button.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_title.dart';
 
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Widget startedButton() {
+      return CustomButton(
+        title: 'Get started',
+        widht: 314,
+        height: 70,
+        onPressed: () {
+          Navigator.pushNamed(context, '/login-page');
+        },
+        colorButton: kBackgroundColor1,
+        textStyle: blueTextStyle.copyWith(
+          fontSize: 20.sp,
+          fontWeight: bold,
+        ),
+        margin: EdgeInsets.only(
+          top: 0.h,
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SafeArea(
@@ -14,54 +36,38 @@ class SplashPage extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: [
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        top: 70.h,
-                        left: 51.w,
-                      ),
-                      child: CustomTitle(
-                        title: 'Find your\nGadget',
-                      ),
+                  Container(
+                    margin: EdgeInsets.only(
+                      top: 70.h,
+                      left: 51.w,
+                    ),
+                    child: CustomTitle(
+                      title: 'Find your\nGadget',
                     ),
                   ),
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(
-                        top: 220.h,
+                        top: 190,
+                        bottom: 18,
                       ),
-                      child: Image.asset(
-                        'assets/image1.png',
-                        fit: BoxFit.contain,
-                        width: 486.w,
-                        height: 528.h,
+                      width: 393.w,
+                      height: 422.h,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            'assets/image1.png',
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            Container(
-              width: 314.w,
-              height: 70.h,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/login-page');
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: kBackgroundColor1,
-                ),
-                child: Text(
-                  'Get started',
-                  style: primaryTextStyle.copyWith(
-                    fontSize: 20.sp,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 112.h,
-            ),
+            startedButton(),
+            SizedBox(height: 112),
           ],
         ),
       ),
