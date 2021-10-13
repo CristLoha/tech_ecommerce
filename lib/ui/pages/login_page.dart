@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
     Widget titleLogin() {
       return Text(
         'Login',
-        style: primaryTextStyle.copyWith(fontSize: 18, fontWeight: bold),
+        style: primaryTextStyle.copyWith(fontSize: 18.sp, fontWeight: bold),
       );
     }
 
@@ -51,8 +51,8 @@ class LoginPage extends StatelessWidget {
           top: 330,
         ),
         padding: EdgeInsets.symmetric(
-          vertical: 36,
-          horizontal: 50,
+          vertical: 36.h,
+          horizontal: 50.w,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(
