@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:tech_ecommerce/shared/theme.dart';
+import 'package:tech_ecommerce/ui/widgets/custom_title.dart';
 
-class SplashPage extends StatefulWidget {
-  @override
-  _SplashPageState createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
+class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +20,8 @@ class _SplashPageState extends State<SplashPage> {
                         top: 70.h,
                         left: 51.w,
                       ),
-                      child: Text(
-                        'Find your\nGadget',
-                        style: whiteTextStyle.copyWith(
-                          fontSize: 65.sp,
-                          fontWeight: extraBold,
-                        ),
+                      child: CustomTitle(
+                        title: 'Find your\nGadget',
                       ),
                     ),
                   ),
@@ -54,7 +45,9 @@ class _SplashPageState extends State<SplashPage> {
               width: 314.w,
               height: 70.h,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login-page');
+                },
                 style: ElevatedButton.styleFrom(
                   primary: kBackgroundColor1,
                 ),
