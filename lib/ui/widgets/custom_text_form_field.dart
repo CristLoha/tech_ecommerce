@@ -35,7 +35,7 @@ class CustomTextFormField extends StatelessWidget {
               Text(
                 title,
                 style: greyTextStyle.copyWith(
-                  fontSize: 15,
+                  fontSize: 15.sp,
                   fontWeight: semiBold,
                 ),
               ),
@@ -49,9 +49,9 @@ class CustomTextFormField extends StatelessWidget {
             cursorColor: kBlackColor,
             decoration: InputDecoration(
               hintText: hintText,
-              suffixText: 'Show',
-              suffixStyle:
-                  blueTextStyle.copyWith(fontWeight: semiBold, fontSize: 15),
+              // suffixText: 'Show',
+              // suffixStyle:
+              //     blueTextStyle.copyWith(fontWeight: semiBold, fontSize: 15.sp),
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(
                   color: kGreyColor,
