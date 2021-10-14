@@ -99,7 +99,9 @@ class LoginPage extends StatelessWidget {
                   Center(
                     child: CustomButton(
                       title: 'Login',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/home-page');
+                      },
                       margin: EdgeInsets.only(top: 62),
                       colorButton: kPrimaryColor,
                       textStyle: whiteTextStyle.copyWith(
