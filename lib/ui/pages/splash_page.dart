@@ -10,8 +10,6 @@ class SplashPage extends StatelessWidget {
     Widget startedButton() {
       return CustomButton(
         title: 'Get started',
-        widht: 314,
-        height: 70,
         onPressed: () {
           Navigator.pushNamed(context, '/login-page');
         },
@@ -53,9 +51,9 @@ class SplashPage extends StatelessWidget {
                       height: 422.h,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                           image: AssetImage(
-                            'assets/image1.png',
+                            'assets/image2.png',
                           ),
                         ),
                       ),

@@ -49,6 +49,9 @@ class CustomTextFormField extends StatelessWidget {
             cursorColor: kBlackColor,
             decoration: InputDecoration(
               hintText: hintText,
+              suffixText: 'Show',
+              suffixStyle:
+                  blueTextStyle.copyWith(fontWeight: semiBold, fontSize: 15),
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(
                   color: kGreyColor,

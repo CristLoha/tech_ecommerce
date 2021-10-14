@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_ecommerce/shared/theme.dart';
+import 'package:tech_ecommerce/ui/widgets/custom_button.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_text_form_field.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_title.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -43,7 +44,7 @@ class LoginPage extends StatelessWidget {
       );
     }
 
-    Widget backgroundLogin() {
+    Widget content() {
       return Container(
         width: double.infinity,
         height: 647.h,
@@ -83,6 +84,42 @@ class LoginPage extends StatelessWidget {
                 ),
                 obscureText: true,
               ),
+              SizedBox(
+                height: 24,
+              ),
+              Text(
+                'Forgot passcode?',
+                style: blueTextStyle.copyWith(
+                  fontSize: 15,
+                  fontWeight: semiBold,
+                ),
+              ),
+              Column(
+                children: [
+                  Center(
+                    child: CustomButton(
+                      title: 'Login',
+                      onPressed: () {},
+                      margin: EdgeInsets.only(top: 62),
+                      colorButton: kPrimaryColor,
+                      textStyle: whiteTextStyle.copyWith(
+                          fontSize: 20, fontWeight: semiBold),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 19,
+              ),
+              Center(
+                child: Text(
+                  'Create account',
+                  style: blueTextStyle.copyWith(
+                    fontSize: 17,
+                    fontWeight: semiBold,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -97,7 +134,7 @@ class LoginPage extends StatelessWidget {
             children: [
               backgroundImage(),
               titleHeader(),
-              backgroundLogin(),
+              content(),
             ],
           ),
         ],

@@ -4,8 +4,6 @@ import 'package:tech_ecommerce/shared/theme.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
-  final double widht;
-  final double height;
   final Function() onPressed;
   final EdgeInsets margin;
   final Color colorButton;
@@ -13,8 +11,6 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
     required this.title,
-    required this.widht,
-    required this.height,
     required this.onPressed,
     required this.margin,
     required this.colorButton,
@@ -24,8 +20,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widht.w,
-      height: height.h,
+      width: 314.w,
+      height: 70.h,
       margin: margin,
       child: ElevatedButton(
         style: TextButton.styleFrom(
