@@ -40,7 +40,10 @@ class LoginPage extends StatelessWidget {
     Widget titleLogin() {
       return Text(
         'Login',
-        style: primaryTextStyle.copyWith(fontSize: 18.sp, fontWeight: bold),
+        style: primaryTextStyle.copyWith(
+          fontSize: 18.sp,
+          fontWeight: bold,
+        ),
       );
     }
 
@@ -49,7 +52,7 @@ class LoginPage extends StatelessWidget {
         width: double.infinity,
         height: 647.h,
         margin: EdgeInsets.only(
-          top: 330,
+          top: 330.h,
         ),
         padding: EdgeInsets.symmetric(
           vertical: 36.h,
@@ -71,7 +74,7 @@ class LoginPage extends StatelessWidget {
                 title: 'Email',
                 hintText: 'Your Email',
                 margin: EdgeInsets.only(
-                  top: 44,
+                  top: 44.h,
                 ),
                 obscureText: false,
               ),
@@ -80,17 +83,17 @@ class LoginPage extends StatelessWidget {
                 title: 'Password',
                 hintText: 'Your Password',
                 margin: EdgeInsets.only(
-                  top: 44,
+                  top: 44.h,
                 ),
                 obscureText: true,
               ),
               SizedBox(
-                height: 24,
+                height: 24.h,
               ),
               Text(
                 'Forgot passcode?',
                 style: blueTextStyle.copyWith(
-                  fontSize: 15,
+                  fontSize: 15.sp,
                   fontWeight: semiBold,
                 ),
               ),
@@ -102,22 +105,22 @@ class LoginPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushNamed(context, '/home-page');
                       },
-                      margin: EdgeInsets.only(top: 62),
+                      margin: EdgeInsets.only(top: 62.h),
                       colorButton: kPrimaryColor,
                       textStyle: whiteTextStyle.copyWith(
-                          fontSize: 20, fontWeight: semiBold),
+                          fontSize: 20.sp, fontWeight: semiBold),
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 19,
+                height: 19.h,
               ),
               Center(
                 child: Text(
                   'Create account',
                   style: blueTextStyle.copyWith(
-                    fontSize: 17,
+                    fontSize: 17.sp,
                     fontWeight: semiBold,
                   ),
                 ),

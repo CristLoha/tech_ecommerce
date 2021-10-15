@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:tech_ecommerce/ui/pages/home/home_page.dart';
+import 'package:tech_ecommerce/ui/pages/home/main_home_page.dart';
 import 'package:tech_ecommerce/ui/pages/login_page.dart';
 import 'package:tech_ecommerce/ui/pages/splash_page.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => SplashPage(),
           '/login-page': (context) => LoginPage(),
-          '/home-page': (context) => HomePage(),
+          '/home-page': (context) => MainDrawerPage(),
         },
       ),
     );

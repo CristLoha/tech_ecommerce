@@ -44,8 +44,8 @@ class SplashPage extends StatelessWidget {
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(
-                        top: 190,
-                        bottom: 18,
+                        top: 190.h,
+                        bottom: 18.h,
                       ),
                       width: 393.w,
                       height: 422.h,
@@ -53,7 +53,7 @@ class SplashPage extends StatelessWidget {
                         image: DecorationImage(
                           fit: BoxFit.contain,
                           image: AssetImage(
-                            'assets/image2.png',
+                            'assets/image1.png',
                           ),
                         ),
                       ),
@@ -63,7 +63,7 @@ class SplashPage extends StatelessWidget {
               ),
             ),
             startedButton(),
-            SizedBox(height: 112),
+            SizedBox(height: 50.h),
           ],
         ),
       ),
