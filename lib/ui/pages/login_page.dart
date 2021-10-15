@@ -3,7 +3,6 @@ import 'package:tech_ecommerce/shared/theme.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_button.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_text_form_field.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_title.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class LoginPage extends StatelessWidget {
     Widget backgroundImage() {
       return Container(
         width: double.infinity,
-        height: 339.w,
+        height: 339,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -28,8 +27,8 @@ class LoginPage extends StatelessWidget {
     Widget titleHeader() {
       return Container(
         margin: EdgeInsets.only(
-          top: 99.h,
-          left: 50.w,
+          top: 99,
+          left: 50,
         ),
         child: CustomTitle(
           title: 'Welcome\nback',
@@ -41,7 +40,7 @@ class LoginPage extends StatelessWidget {
       return Text(
         'Login',
         style: primaryTextStyle.copyWith(
-          fontSize: 18.sp,
+          fontSize: 18,
           fontWeight: bold,
         ),
       );
@@ -50,13 +49,13 @@ class LoginPage extends StatelessWidget {
     Widget content() {
       return Container(
         width: double.infinity,
-        height: 647.h,
+        height: 647,
         margin: EdgeInsets.only(
-          top: 330.h,
+          top: 330,
         ),
         padding: EdgeInsets.symmetric(
-          vertical: 36.h,
-          horizontal: 50.w,
+          vertical: 36,
+          horizontal: 50,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.vertical(
@@ -74,7 +73,7 @@ class LoginPage extends StatelessWidget {
                 title: 'Email',
                 hintText: 'Your Email',
                 margin: EdgeInsets.only(
-                  top: 44.h,
+                  top: 44,
                 ),
                 obscureText: false,
               ),
@@ -83,17 +82,17 @@ class LoginPage extends StatelessWidget {
                 title: 'Password',
                 hintText: 'Your Password',
                 margin: EdgeInsets.only(
-                  top: 44.h,
+                  top: 44,
                 ),
                 obscureText: true,
               ),
               SizedBox(
-                height: 24.h,
+                height: 24,
               ),
               Text(
                 'Forgot passcode?',
                 style: blueTextStyle.copyWith(
-                  fontSize: 15.sp,
+                  fontSize: 15,
                   fontWeight: semiBold,
                 ),
               ),
@@ -105,22 +104,22 @@ class LoginPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.pushNamed(context, '/home-page');
                       },
-                      margin: EdgeInsets.only(top: 62.h),
+                      margin: EdgeInsets.only(top: 62),
                       colorButton: kPrimaryColor,
                       textStyle: whiteTextStyle.copyWith(
-                          fontSize: 20.sp, fontWeight: semiBold),
+                          fontSize: 20, fontWeight: semiBold),
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 19.h,
+                height: 19,
               ),
               Center(
                 child: Text(
                   'Create account',
                   style: blueTextStyle.copyWith(
-                    fontSize: 17.sp,
+                    fontSize: 17,
                     fontWeight: semiBold,
                   ),
                 ),

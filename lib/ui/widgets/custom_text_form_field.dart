@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tech_ecommerce/shared/theme.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String title;
@@ -27,7 +26,7 @@ class CustomTextFormField extends StatelessWidget {
             children: [
               Image.asset(
                 image,
-                width: 24.w,
+                width: 24,
               ),
               SizedBox(
                 width: 11,
@@ -35,7 +34,7 @@ class CustomTextFormField extends StatelessWidget {
               Text(
                 title,
                 style: greyTextStyle.copyWith(
-                  fontSize: 15.sp,
+                  fontSize: 15,
                   fontWeight: semiBold,
                 ),
               ),

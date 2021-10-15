@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_ecommerce/shared/theme.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:tech_ecommerce/ui/widgets/custom_categories.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,13 +20,13 @@ class _HomePageState extends State<HomePage> {
       return Expanded(
         child: Container(
           padding: EdgeInsets.symmetric(
-            horizontal: 21.w,
+            horizontal: 21,
             vertical: 18,
           ),
           decoration: BoxDecoration(
             color: kBackgroundColor2,
             border: Border.all(
-              width: 2.w,
+              width: 2,
               color: kGreyColor2,
             ),
             borderRadius: BorderRadius.circular(
@@ -41,12 +41,12 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(
-                width: 12.h,
+                width: 12,
               ),
               Text(
                 'Search',
                 style: greyTextStyle.copyWith(
-                  fontSize: 17.sp,
+                  fontSize: 17,
                   fontWeight: semiBold,
                 ),
               )
@@ -59,8 +59,8 @@ class _HomePageState extends State<HomePage> {
     Widget header() {
       return Container(
         padding: EdgeInsets.symmetric(
-          horizontal: 54.h,
-          vertical: 68.w,
+          horizontal: 54,
+          vertical: 68,
         ),
         child: Row(
           children: [
@@ -87,11 +87,11 @@ class _HomePageState extends State<HomePage> {
                     },
                     icon: Image.asset(
                       'assets/icon_drawer.png',
-                      width: 22.w,
+                      width: 22,
                     ),
                   ),
             SizedBox(
-              width: 26.4.w,
+              width: 26.4,
             ),
             searchBar(),
           ],
@@ -101,35 +101,81 @@ class _HomePageState extends State<HomePage> {
 
     Widget categories() {
       return Container(
-        child: Row(
-          children: [
-            Container(
-              child: Text('Wearable'),
-            )
-          ],
+        margin: EdgeInsets.only(
+          top: 56,
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(
+                width: 54,
+              ),
+              CustomCategories(
+                title: 'Wearable',
+                textStyle: blueTextStyle.copyWith(
+                  fontSize: 17,
+                  fontWeight: semiBold,
+                ),
+                color: kPrimaryColor,
+              ),
+              SizedBox(
+                width: 24,
+              ),
+              CustomCategories(
+                title: 'Laptops',
+                textStyle:
+                    greyTextStyle.copyWith(fontSize: 17, fontWeight: semiBold),
+                color: kTransparentColor,
+              ),
+              SizedBox(
+                width: 24,
+              ),
+              CustomCategories(
+                title: 'Phones',
+                textStyle: greyTextStyle.copyWith(
+                  fontSize: 17,
+                  fontWeight: semiBold,
+                ),
+                color: kTransparentColor,
+              ),
+              SizedBox(
+                width: 24,
+              ),
+              CustomCategories(
+                title: 'Drones',
+                textStyle: greyTextStyle.copyWith(
+                  fontSize: 17,
+                  fontWeight: semiBold,
+                ),
+                color: kTransparentColor,
+              ),
+              SizedBox(
+                width: 54,
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget content() {
       return Expanded(
-        child: Container(
-          margin: EdgeInsets.only(
-            left: 50.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 50),
+              child: Text(
                 'Order online\ncollect in store',
                 style: primaryTextStyle.copyWith(
-                  fontSize: 34.sp,
+                  fontSize: 34,
                   fontWeight: bold,
                 ),
               ),
-              categories()
-            ],
-          ),
+            ),
+            categories()
+          ],
         ),
       );
     }
@@ -139,14 +185,11 @@ class _HomePageState extends State<HomePage> {
         ..scale(scaleFactor),
       duration: Duration(milliseconds: 250),
       color: kBackgroundColor2,
-      child: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            header(),
-            content(),
-          ],
-        ),
+      child: ListView(
+        children: [
+          header(),
+          content(),
+        ],
       ),
     );
   }

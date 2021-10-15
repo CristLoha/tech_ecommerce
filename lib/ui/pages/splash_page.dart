@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:tech_ecommerce/shared/theme.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_button.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_title.dart';
@@ -15,12 +15,10 @@ class SplashPage extends StatelessWidget {
         },
         colorButton: kBackgroundColor1,
         textStyle: blueTextStyle.copyWith(
-          fontSize: 20.sp,
+          fontSize: 20,
           fontWeight: bold,
         ),
-        margin: EdgeInsets.only(
-          top: 0.h,
-        ),
+        margin: EdgeInsets.only(top: 0),
       );
     }
 
@@ -34,8 +32,8 @@ class SplashPage extends StatelessWidget {
                 children: [
                   Container(
                     margin: EdgeInsets.only(
-                      top: 70.h,
-                      left: 51.w,
+                      top: 70,
+                      left: 51,
                     ),
                     child: CustomTitle(
                       title: 'Find your\nGadget',
@@ -44,11 +42,11 @@ class SplashPage extends StatelessWidget {
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(
-                        top: 190.h,
-                        bottom: 18.h,
+                        top: 190,
+                        bottom: 18,
                       ),
-                      width: 393.w,
-                      height: 422.h,
+                      width: 393,
+                      height: 422,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.contain,
@@ -63,7 +61,7 @@ class SplashPage extends StatelessWidget {
               ),
             ),
             startedButton(),
-            SizedBox(height: 50.h),
+            SizedBox(height: 50),
           ],
         ),
       ),

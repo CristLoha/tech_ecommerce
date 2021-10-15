@@ -20,8 +20,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 314.w,
-      height: 70.h,
+      width: 314,
+      height: 70,
       margin: margin,
       child: ElevatedButton(
         style: TextButton.styleFrom(
