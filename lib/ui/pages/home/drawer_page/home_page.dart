@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tech_ecommerce/shared/theme.dart';
 import 'package:tech_ecommerce/ui/widgets/custom_categories.dart';
+import 'package:tech_ecommerce/ui/widgets/product_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class _HomePageState extends State<HomePage> {
     Widget searchBar() {
       return Expanded(
         child: Container(
+          width: 267,
           padding: EdgeInsets.symmetric(
             horizontal: 21,
             vertical: 18,
@@ -160,27 +162,38 @@ class _HomePageState extends State<HomePage> {
     }
 
     Widget title() {
-      return Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(left: 50),
-              child: Text(
-                'Order online\ncollect in store',
-                style: primaryTextStyle.copyWith(
-                  fontSize: 34,
-                  fontWeight: bold,
-                ),
-              ),
-            ),
-          ],
+      return Container(
+        margin: EdgeInsets.only(
+          top: 55,
+          left: 50,
+        ),
+        child: Expanded(
+          child: Text(
+            'Order online\ncollect in store',
+            style: primaryTextStyle.copyWith(fontSize: 34, fontWeight: bold),
+          ),
         ),
       );
     }
 
     Widget content() {
-      return Container();
+      return Container(
+        margin: EdgeInsets.only(
+          top: 115,
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(width: 54),
+              ProductCard(),
+              SizedBox(width: 34),
+              ProductCard(),
+              SizedBox(width: 54),
+            ],
+          ),
+        ),
+      );
     }
 
     return AnimatedContainer(
@@ -193,6 +206,10 @@ class _HomePageState extends State<HomePage> {
           header(),
           title(),
           categories(),
+          content(),
+          SizedBox(
+            height: 40,
+          ),
         ],
       ),
     );

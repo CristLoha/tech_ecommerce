@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tech_ecommerce/shared/theme.dart';
 
 class CustomCategories extends StatelessWidget {
   final String title;
