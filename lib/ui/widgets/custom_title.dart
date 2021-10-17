@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tech_ecommerce/shared/theme.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTitle extends StatelessWidget {
   final String title;
@@ -11,7 +10,7 @@ class CustomTitle extends StatelessWidget {
     return Text(
       title,
       style: whiteTextStyle.copyWith(
-        fontSize: 65.sp,
+        fontSize: 65,
         fontWeight: extraBold,
       ),
     );
