@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
-    Widget content() {
+    Widget title() {
       return Expanded(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -174,10 +174,13 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            categories()
           ],
         ),
       );
+    }
+
+    Widget content() {
+      return Container();
     }
 
     return AnimatedContainer(
@@ -188,7 +191,8 @@ class _HomePageState extends State<HomePage> {
       child: ListView(
         children: [
           header(),
-          content(),
+          title(),
+          categories(),
         ],
       ),
     );
